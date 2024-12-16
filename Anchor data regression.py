@@ -13,22 +13,23 @@ plt.close('all')
 # Measured data #
 #################
 
+# The following data are just an example, to show the format of the data
 # Applied tangential stresses (in kPa)
-tau = np.array([157.4, 216.5, 275.5, 314.9, 354.2, 393.6])
+tau = np.array([150, 200, 250, 300, 350, 400, 450])
 
 # 'Failure' stress determined by the standard approach (in kPa)
-fail_stress = 393
+fail_stress = 450
 
 # Measured creep (in mm)
-ks  = np.array([0.21 , 0.24,  0.48,  0.66,  0.94,  1.49])
+ks  = np.array([0.125, 0.25, 0.5 ,0.75, 1, 1.25, 2])
 
 
 #######################
 # Defining the priors #
 #######################
-prior_Ea = ['Lognormal', 2000., 400.] #in kPa/mm
-prior_taua = ['Lognormal', 300, 100] #in kPa
-prior_ksmin = ['Lognormal', 0.2, 0.1] #in mm
+prior_Ea = ['Lognormal', 900., 300.] #in kPa/mm
+prior_taua = ['Lognormal', 600, 100] #in kPa
+prior_ksmin = ['Lognormal', 0.05, 0.01] #in mm
 prior_std = ['Uniform', 0, 1]  #in mm
 
 
